@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "44Engine\44Engine.vcxproj", "{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9} = {AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine_SOURCE", "Engine_SOURCE\Engine_SOURCE.vcxproj", "{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SHADER_SOURCE", "SHADER_SOURCE\SHADER_SOURCE.vcxitems", "{71C15DBC-53BC-4816-AAF5-83F42B6E9EB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Debug|x64.ActiveCfg = Debug|x64
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Debug|x64.Build.0 = Debug|x64
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Debug|x86.ActiveCfg = Debug|Win32
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Debug|x86.Build.0 = Debug|Win32
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Release|x64.ActiveCfg = Release|x64
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Release|x64.Build.0 = Release|x64
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Release|x86.ActiveCfg = Release|Win32
+		{C98E76B1-DBB8-4C65-AD37-B2EAEBBD8CDC}.Release|x86.Build.0 = Release|Win32
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Debug|x64.ActiveCfg = Debug|x64
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Debug|x64.Build.0 = Debug|x64
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Debug|x86.ActiveCfg = Debug|Win32
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Debug|x86.Build.0 = Debug|Win32
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Release|x64.ActiveCfg = Release|x64
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Release|x64.Build.0 = Release|x64
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Release|x86.ActiveCfg = Release|Win32
+		{AD74F3C9-94D5-48DC-807D-A0ECCDD99EE9}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D46A700E-F357-4567-BFE4-DEE2975BD7A5}
+	EndGlobalSection
+EndGlobal
