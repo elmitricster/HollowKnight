@@ -63,7 +63,7 @@ namespace ya
 		std::shared_ptr<Mesh> mesh2 = Resources::Find<Mesh>(L"RectMesh");
 		mr2->SetMesh(mesh2);
 
-		obj->SetScale(Vector3(0.3f, 0.3f, 1.0f));
+		obj->SetScale(Vector3(1.0f, 0.5f, 1.0f));
 
 		Scene::Initialize();
 	}
