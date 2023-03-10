@@ -36,7 +36,6 @@ namespace ya
 		
 	private:
 		Transform* mParent;
-
 		Vector3 mFoward;
 		Vector3 mRight;
 		Vector3 mUp;

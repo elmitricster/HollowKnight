@@ -22,6 +22,8 @@ namespace ya::graphics
 		void BindShader(eShaderStage stage, UINT slot);
 		void Clear();
 
+		ScratchImage& GetScratchImage() { return mImage; }
+
 	private:
 		ScratchImage mImage;
 		Microsoft::WRL::ComPtr<ID3D11Texture2D> mTexture;

@@ -394,6 +394,9 @@ namespace ya::renderer
 		Resources::Load<Texture>(L"DefaultSprite", L"Light.png");
 		Resources::Load<Texture>(L"HPBarTexture", L"HPBar.png");
 		Resources::Load<Texture>(L"FadeTexture", L"FadeView.png");
+		Resources::Load<Texture>(L"KnightTexture", L"Knight.png");
+		Resources::Load<Texture>(L"TitleBGTexture", L"TitleBG.png");
+		Resources::Load<Texture>(L"BossTexture", L"Hornet.png");
 	}
 
 	void LoadMaterial()
@@ -405,6 +408,30 @@ namespace ya::renderer
 		material->SetShader(shader);
 		material->SetTexture(texture);
 		Resources::Insert<Material>(L"RectMaterial", material);
+
+		// Knight
+		std::shared_ptr<Texture> knightTexture = Resources::Find<Texture>(L"KnightTexture");
+		std::shared_ptr<Shader> knightShader = Resources::Find<Shader>(L"RectShader");
+		std::shared_ptr<Material> knightMaterial = std::make_shared<Material>();
+		knightMaterial->SetShader(knightShader);
+		knightMaterial->SetTexture(knightTexture);
+		Resources::Insert<Material>(L"KnightMaterial", knightMaterial);
+
+		// Boss
+		std::shared_ptr<Texture> bossTexture = Resources::Find<Texture>(L"BossTexture");
+		std::shared_ptr<Shader> bossShader = Resources::Find<Shader>(L"RectShader");
+		std::shared_ptr<Material> bossMaterial = std::make_shared<Material>();
+		bossMaterial->SetShader(bossShader);
+		bossMaterial->SetTexture(bossTexture);
+		Resources::Insert<Material>(L"BossMaterial", bossMaterial);
+
+		// TitleBG
+		std::shared_ptr<Texture> titleBgTexture = Resources::Find<Texture>(L"TitleBGTexture");
+		std::shared_ptr<Shader> titleBgShader = Resources::Find<Shader>(L"RectShader");
+		std::shared_ptr<Material> titleBgMaterial = std::make_shared<Material>();
+		titleBgMaterial->SetShader(titleBgShader);
+		titleBgMaterial->SetTexture(titleBgTexture);
+		Resources::Insert<Material>(L"TitleBGMaterial", titleBgMaterial);
 		
 		// Sprite
 		std::shared_ptr<Texture> spriteTexture = Resources::Find<Texture>(L"DefaultSprite");

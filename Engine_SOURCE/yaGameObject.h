@@ -2,9 +2,15 @@
 #include "yaComponent.h"
 #include "yaScript.h"
 #include "yaEntity.h"
+#include "yaMesh.h"
+#include "yaShader.h"
+#include "yaTransform.h"
+#include "yaSpriteRenderer.h"
+#include "yaMeshRenderer.h"
 
 namespace ya
 {
+	using namespace ya::math;
 	class GameObject : public Entity
 	{
 	public:
@@ -68,6 +74,21 @@ namespace ya
 
 			return false;
 		}
+
+		void SetPos(Vector3 value);
+		void SetScale(Vector3 value);
+		void SetRotation(Vector3 value);
+
+		Vector3 GetPos();
+		Vector3 GetScale();
+		Vector3 GetRotation();
+
+		Vector3 Forward() { return GetComponent<Transform>()->Forward(); }
+		Vector3 Right() { return GetComponent<Transform>()->Right(); }
+		Vector3 Up() { return GetComponent<Transform>()->Up(); }
+
+		void SetMaterial(std::shared_ptr<Material> material);
+		void SetMesh(std::shared_ptr<Mesh> mesh);
 
 		void Pause() { mState = eState::Paused; }
 		void Death() { mState = eState::Dead; }

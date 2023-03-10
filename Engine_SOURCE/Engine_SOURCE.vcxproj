@@ -160,6 +160,7 @@
     <ClInclude Include="yaAnimator.h" />
     <ClInclude Include="yaApplication.h" />
     <ClInclude Include="yaBaseRenderer.h" />
+    <ClInclude Include="yaBgImage.h" />
     <ClInclude Include="yaCamera.h" />
     <ClInclude Include="yaCameraScript.h" />
     <ClInclude Include="yaCollider.h" />
@@ -206,6 +207,7 @@
     <ClCompile Include="yaAnimator.cpp" />
     <ClCompile Include="yaApplication.cpp" />
     <ClCompile Include="yaBaseRenderer.cpp" />
+    <ClCompile Include="yaBgImage.cpp" />
     <ClCompile Include="yaCamera.cpp" />
     <ClCompile Include="yaCameraScript.cpp" />
     <ClCompile Include="yaCollider.cpp" />

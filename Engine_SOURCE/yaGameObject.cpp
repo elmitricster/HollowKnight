@@ -1,5 +1,4 @@
 #include "yaGameObject.h"
-#include "yaTransform.h"
 
 namespace ya
 {
@@ -122,6 +121,69 @@ namespace ya
 		{
 			mScripts.push_back(dynamic_cast<Script*>(comp));
 			comp->SetOwner(this);
+		}
+	}
+
+	void GameObject::SetPos(Vector3 value)
+	{
+		if (nullptr != GetComponent<Transform>())
+		{
+			GetComponent<Transform>()->SetPosition(value);
+		}
+	}
+
+	void GameObject::SetScale(Vector3 value)
+	{
+		if (nullptr != GetComponent<Transform>())
+		{
+			GetComponent<Transform>()->SetScale(value);
+		}
+		if (nullptr != GetComponent<SpriteRenderer>())
+		{
+			GetComponent<SpriteRenderer>()->ChangeSize();
+		}
+		if (nullptr != GetComponent<MeshRenderer>())
+		{
+			GetComponent<MeshRenderer>()->ChangeSize();
+		}
+	}
+
+	void GameObject::SetRotation(Vector3 value)
+	{
+		if (nullptr != GetComponent<Transform>())
+		{
+			GetComponent<Transform>()->SetRotation(value);
+		}
+	}
+
+	Vector3 GameObject::GetPos()
+	{
+		return GetComponent<Transform>()->GetPosition();
+	}
+
+	Vector3 GameObject::GetScale()
+	{
+		return GetComponent<Transform>()->GetScale();
+	}
+
+	Vector3 GameObject::GetRotation()
+	{
+		return GetComponent<Transform>()->GetRotation();
+	}
+
+	void GameObject::SetMaterial(std::shared_ptr<Material> material)
+	{
+		if (nullptr != GetComponent<SpriteRenderer>())
+		{
+			GetComponent<SpriteRenderer>()->SetMaterial(material);
+		}
+	}
+
+	void GameObject::SetMesh(std::shared_ptr<Mesh> mesh)
+	{
+		if (nullptr != GetComponent<SpriteRenderer>())
+		{
+			GetComponent<SpriteRenderer>()->SetMesh(mesh);
 		}
 	}
 }

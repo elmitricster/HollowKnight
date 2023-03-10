@@ -17,13 +17,23 @@ namespace ya
 		virtual void Render() override;
 
 		void SetMesh(std::shared_ptr<Mesh> mesh) { mMesh = mesh; }
-		void SetMaterial(std::shared_ptr<Material> shader) { mMaterial = shader; }
+		void SetMaterial(std::shared_ptr<Material> material);
 		std::shared_ptr<Mesh> GetMesh() { return mMesh; }
 		std::shared_ptr<Material> GetMaterial() { return mMaterial; }
+
+		void ChangeSize() { mChanged = true; }
+
+	private:
+		void adjustTexture();
 
 	private:
 		std::shared_ptr<Mesh> mMesh;
 		std::shared_ptr<Material> mMaterial;
+
+		float mWidthRatio;
+		float mHeightRatio;
+
+		bool mChanged;
 	};
 }
 
